@@ -13,6 +13,7 @@ import BasicHookUseMemo1 from "./hooks/useMemo/example-1";
 import BasicHookUseReducer1 from "./hooks/useReducer/example-1";
 import BasicHookUseRef1 from "./hooks/useRef/example-1";
 import BasicHookUseLayoutEffect1 from "./hooks/useLayoutEffect/example-1";
+import BasicHookUseContext1 from "./hooks/useContext/example-1";
 
 function App() {
   const [useState1, setUseState1] = useState(false);
@@ -27,6 +28,7 @@ function App() {
   const [useCallback1, setUseCallback1] = useState(false);
   const [useMemo1, setUseMemo1] = useState(false);
   const [useReducer1, setUseReducer1] = useState(false);
+  const [useContext1, setUseContext1] = useState(false);
 
   return (
     <Grid container spacing={5}>
@@ -91,9 +93,7 @@ function App() {
         {useLayoutEffect1 && <BasicHookUseLayoutEffect1 />}
       </Grid>
       <Grid item xs={12}>
-        <button onClick={() => setUseRef1(!useRef1)}>
-          Example useRef 1
-        </button>
+        <button onClick={() => setUseRef1(!useRef1)}>Example useRef 1</button>
         <br />
         {useRef1 && <BasicHookUseRef1 />}
       </Grid>
@@ -117,6 +117,13 @@ function App() {
         </button>
         <br />
         {useReducer1 && <BasicHookUseReducer1 />}
+      </Grid>
+      <Grid item xs={12}>
+        <button onClick={() => setUseContext1(!useContext1)}>
+          Example useContext 1
+        </button>
+        <br />
+        {useContext1 && <BasicHookUseContext1 />}
       </Grid>
     </Grid>
   );
