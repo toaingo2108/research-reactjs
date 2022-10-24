@@ -7,9 +7,11 @@ const BasicHookUseEffect = () => {
   useEffect(() => {
     // Update the document title
     document.title = title;
+    console.log("callback");
 
     return () => {
       document.title = "React App";
+      console.log("cleanup");
     };
   });
 

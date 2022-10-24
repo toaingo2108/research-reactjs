@@ -11,9 +11,6 @@ const BasicHookUseEffect3 = () => {
     fetch(`https://jsonplaceholder.typicode.com/${type}`)
       .then((res) => res.json())
       .then((data) => setData(data));
-    return () => {
-      setData([]);
-    };
   }, [type]);
 
   return (

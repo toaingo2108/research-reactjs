@@ -14,7 +14,8 @@ const BasicHookUseRef1 = () => {
   // };
 
   // useRef
-  const ref = useRef()
+  const ref = useRef();
+  console.log(ref);
 
   const handleStart = () => {
     ref.current = setInterval(() => {
@@ -23,7 +24,7 @@ const BasicHookUseRef1 = () => {
   };
 
   const handleStop = () => {
-    clearInterval(ref.current)
+    clearInterval(ref.current);
   };
 
   return (
